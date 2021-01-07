@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-10-20T14:57:55.748Z</updated>
+  <updated>2021-01-07T03:39:29.501Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 2 2021</title>
+    <link href="/2021/01/07/2021/"/>
+    <id>/2021/01/07/2021/</id>
+    <published>2021-01-07T02:54:55.000Z</published>
+    <updated>2021-01-07T03:39:29.501Z</updated>
+    
+    <content type="html"><![CDATA[<p>咕咕咕了好久的博客（两三个月了吧？</p><p>今天早上扛着零下十度的温度坐火车回到家了，大三上学期也是过去了。2020这一年真的发生了好多事情，慢慢唠一唠。</p><h1 id="退役"><a href="#退役" class="headerlink" title="退役"></a>退役</h1><p>　　正式从河狸算法协会退役了，但是退役的却不是很光荣，成了一个“临阵脱逃”的人。经过了今年CCPC和CCPC省赛的打击，确实失去了一些冲劲。不过既然决定退役了，就不会后悔，这里还是祝愿一下陪我一起奋斗了两年的老伙计，希望你们能拿到自己想要的东西！<br>　　我的ACM生涯就这样结束了，之前总想着说好多好多，现在却不知道说什么了，就放些图纪念一下吧。<br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990002387.webp" data-fancybox="images" data-caption="CodeForces" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990002387.webp" class="img-shadow img-margin"></center></a><br>    </p><p class="p center small">打了五六十场都没上紫的蒟蒻一个</p><br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990132588.webp" data-fancybox="images" data-caption="Nowcoder" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990132588.webp" class="img-shadow img-margin"></center></a><br>    <p class="p center small">打了一百多场牛客都没上1000的蒟蒻一个</p><br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990194618.webp" data-fancybox="images" data-caption="Blog" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990194618.webp" class="img-shadow img-margin"></center></a><br>    <p class="p center small">博客里面的标签页</p><p></p><h1 id="决定考研"><a href="#决定考研" class="headerlink" title="决定考研"></a>决定考研</h1><p>　　之前一直都没准备考研，也没好好学那些考研的课，也做好了求职的准备，但是我家那个她准备考研，正好周围的人也都在劝我，自己心里也纠结了一阵，还是试一下吧，冲一冲，毕竟说心里话，现在这个学校并没有很满足我内心里面对大学的憧憬。</p><p>博客很久没有打理过了，今天在家整理了一下友链，最近也是出现了越来越多的超级好看的主题什么的，看的我心里痒痒的，不过还是不折腾了，我对自己的博客还是很自信的，这个寒假，我可以全身心投入在Artitalk的开发和维护上面，顺便了解了解考研的东西。首先得把驾照考出来，太难了，冲冲冲！</p><p>以后博客不会再涉及题解之类的文章，关于以后写什么类型的文章还没有想清楚，分享生活可能会变成主力。</p>]]></content>
+    
+    <summary type="html">
+    
+      咕咕咕了多久的博客，得拾起来了，顺便总结一下2020吧
+    
+    </summary>
+    
+      <category term="Life" scheme="/categories/Life/"/>
+    
+    
+      <category term="life" scheme="/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>👴眼里有了你，所以有光</title>
@@ -338,9 +360,9 @@
     
       <category term="Github" scheme="/tags/Github/"/>
     
-      <category term="javascript" scheme="/tags/javascript/"/>
-    
       <category term="web" scheme="/tags/web/"/>
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
     
       <category term="ajax" scheme="/tags/ajax/"/>
     
@@ -364,9 +386,9 @@
       <category term="Tutorial" scheme="/categories/Tutorial/"/>
     
     
-      <category term="javascript" scheme="/tags/javascript/"/>
-    
       <category term="web" scheme="/tags/web/"/>
+    
+      <category term="javascript" scheme="/tags/javascript/"/>
     
       <category term="ajax" scheme="/tags/ajax/"/>
     
@@ -499,34 +521,6 @@
       <category term="spfa" scheme="/tags/spfa/"/>
     
       <category term="scoi" scheme="/tags/scoi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Markdown写作进阶——标签</title>
-    <link href="/2020/04/18/mdjj/"/>
-    <id>/2020/04/18/mdjj/</id>
-    <published>2020-04-18T14:24:11.000Z</published>
-    <updated>2020-10-20T14:57:58.449Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note link green"><p>样式以及js代码参考于：<a href="https://volantis.js.org/tag-plugins/" target="_blank" rel="noopener">https://volantis.js.org/tag-plugins/</a></p></div><blockquote><p>我只是将我需要的移植了过来，需要别的可以自行移植。所以我下面说到的都是关于我移植的部分标签。<br>移植于主题<strong><span class="p blue">volantis</span></strong>，这款主题很好看，大家可以去尝试一下。<br>移植起来也很简单，只要将对应的js和css添加到自己的引用中即可。</p></blockquote><h1 id="简单说一下移植以及使用"><a href="#简单说一下移植以及使用" class="headerlink" title="简单说一下移植以及使用"></a>简单说一下移植以及使用</h1><p class="p center cyan">移植简单，制作不易。支持原作者！</p><div class="note warning"><p>因为我也不是很清楚原理，所以给出傻瓜式操作</p></div><h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>将以下代码放进<code>../node_modules/hexo-generator-tag/index.js</code>中</p><pre><code class="lang-javascript">function postFolding(args, content) {  args = args.join(&#39; &#39;).split(&#39;,&#39;);  let style = &#39;&#39;  let title = &#39;&#39;  if (args.length &gt; 1) {    style = args[0].trim()    title = args[1].trim()  } else if (args.length &gt; 0) {    title = args[0].trim()  }  if (style != undefined) {    return `&lt;details ${style}&gt;&lt;summary&gt; ${hexo.render.renderSync({text: title, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)} &lt;/summary&gt;              &lt;div class=&#39;content&#39;&gt;              ${hexo.render.renderSync({text: content, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)}              &lt;/div&gt;            &lt;/details&gt;`;  } else {    return `&lt;details&gt;&lt;summary&gt; ${hexo.render.renderSync({text: title, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)} &lt;/summary&gt;              &lt;div class=&#39;content&#39;&gt;              ${hexo.render.renderSync({text: content, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)}              &lt;/div&gt;            &lt;/details&gt;`;  }}hexo.extend.tag.register(&#39;folding&#39;, postFolding, {ends: true});function postP(args) {  args = args.join(&#39; &#39;).split(&#39;,&#39;)  let p0 = args[0].trim()  let p1 = args[1].trim()  return `&lt;p class=&#39;p ${p0}&#39;&gt;${p1}&lt;/p&gt;`;}function postSpan(args) {  args = args.join(&#39; &#39;).split(&#39;,&#39;)  let p0 = args[0].trim()  let p1 = args[1].trim()  return `&lt;span class=&#39;p ${p0}&#39;&gt;${p1}&lt;/span&gt;`;}hexo.extend.tag.register(&#39;p&#39;, postP);hexo.extend.tag.register(&#39;span&#39;, postSpan);function postNote(args) {  args = args.join(&#39; &#39;).split(&#39;,&#39;)  if (args.length &gt; 1) {    let cls = args[0].trim()    let text = args[1].trim()    return `&lt;div class=&quot;note ${cls}&quot;&gt;${hexo.render.renderSync({text: text, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)}&lt;/div&gt;`;  } else if (args.length &gt; 0) {    let text = args[0].trim()    return `&lt;div class=&quot;note&quot;&gt;${hexo.render.renderSync({text: text, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)}&lt;/div&gt;`;  }}function postNoteBlock(args, content) {  return `&lt;div class=&quot;note ${args.join(&#39; &#39;)}&quot;&gt;            ${hexo.render.renderSync({text: content, engine: &#39;markdown&#39;}).split(&#39;\n&#39;).join(&#39;&#39;)}          &lt;/div&gt;`;}hexo.extend.tag.register(&#39;note&#39;, postNote);hexo.extend.tag.register(&#39;noteblock&#39;, postNoteBlock, {ends: true});</code></pre><p>如果你想移植自己想用的，将主题文件下载下来找到对应的js将其中的代码一起复制进来即可。</p><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><p>下载这个css，放在本地调用：<a href="https://cdn.jsdelivr.net/gh/drew233/css/newtag.css" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/drew233/css/newtag.css</a> </p><p>如果你想移植自己想用的，在示例站的css中找到对应的代码一起复制进来即可。</p><p class="p center cyan">下面高能预警，非战斗人员撤退。</p><h1 id="对照表"><a href="#对照表" class="headerlink" title="对照表"></a>对照表</h1><p>方便以后自己使用，也给大家看一下效果。</p><h2 id="容器-folding"><a href="#容器-folding" class="headerlink" title="容器-folding"></a>容器-folding</h2><details green><summary> <p>点击查看markdown源代码</p> </summary>              <div class="content">              <p>{% folding, 图片测试 %}<br>{% fb_img <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1603205692256.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/drew233/imgcdn/1603205692256.png</a> %}<br>{% endfolding %}<br>{% folding cyan open, 查看默认打开的折叠框 %}</p><p>这是一个默认打开的折叠框。</p><p>{% endfolding %}<br>{% folding green, 查看代码测试 %}</p><p>{% endfolding %}<br>{% folding yellow, 查看列表测试 %}</p><ul><li>haha</li><li>hehe</li></ul><p>{% endfolding %}<br>{% folding red, 查看嵌套测试 %}</p><p>{% folding blue, 查看嵌套测试2 %}</p><p>{% folding 查看嵌套测试3 %}</p><p>hahaha </p><p>{% endfolding %}<br>{% endfolding %}<br>{% endfolding %}</p>              </div>            </details><details><summary> <p>图片测试</p> </summary>              <div class="content">              <p><a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1603205692256.png" data-fancybox="images" data-caption="主人没有描述我哦~" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1603205692256.png" class="img-shadow img-margin"></center></a></p>              </div>            </details><details cyan open><summary> <p>查看默认打开的折叠框</p> </summary>              <div class="content">              <p>这是一个默认打开的折叠框。</p>              </div>            </details><details green><summary> <p>查看代码测试</p> </summary>              <div class="content">                            </div>            </details><details yellow><summary> <p>查看列表测试</p> </summary>              <div class="content">              <ul><li>haha</li><li>hehe</li></ul>              </div>            </details><details red><summary> <p>查看嵌套测试</p> </summary>              <div class="content">              <details blue><summary> <p>查看嵌套测试2</p> </summary>              <div class="content">              <details><summary> <p>查看嵌套测试3</p> </summary>              <div class="content">              <p>hahaha </p>              </div>            </details>              </div>            </details>              </div>            </details><h2 id="标签-note"><a href="#标签-note" class="headerlink" title="标签-note"></a>标签-note</h2><details green><summary> <p>点击查看markdown源代码</p> </summary>              <div class="content">              <div class="note done red"><p>支持使用颜色参数：clear，light，gray，red，yellow，green，cyan，blue</p></div><p>{% note red, 为简单的一句话提供的简便写法。 %}</p><p>{% note quote, 为简单的一句话提供的简便写法。 %}</p><p>{% note info, 为简单的一句话提供的简便写法。 %}</p><p>{% note warning, 为简单的一句话提供的简便写法。 %}</p><p>{% note done, 支持同样丰富的参数。 %}</p><p>{% note success, 支持同样丰富的参数。 %}</p><p>{% note danger, 支持同样丰富的参数。 %}</p><p>{% note error, 支持同样丰富的参数。 %}</p><p>{% note radiation, 支持同样丰富的参数。 %}</p><p>{% note bug, 支持同样丰富的参数。 %}</p><p>{% note idea, 支持同样丰富的参数。 %}</p><p>{% note link, 支持同样丰富的参数。 %}</p><p>{% note todo, 支持同样丰富的参数。 %}</p><p>{% note msg, 支持同样丰富的参数。 %}</p><p>{% note guide, 支持同样丰富的参数。 %}</p><p>{% note up, 支持同样丰富的参数。 %}</p><p>{% note undo, 支持同样丰富的参数。 %}</p><p>{% note paperclip, 支持同样丰富的参数。 %}</p>              </div>            </details><div class="note red"><p>为简单的一句话提供的简便写法。</p></div><div class="note quote"><p>为简单的一句话提供的简便写法。</p></div><div class="note info"><p>为简单的一句话提供的简便写法。</p></div><div class="note warning"><p>为简单的一句话提供的简便写法。</p></div><div class="note done"><p>支持同样丰富的参数。</p></div><div class="note success"><p>支持同样丰富的参数。</p></div><div class="note danger"><p>支持同样丰富的参数。</p></div><div class="note error"><p>支持同样丰富的参数。</p></div><div class="note radiation"><p>支持同样丰富的参数。</p></div><div class="note bug"><p>支持同样丰富的参数。</p></div><div class="note idea"><p>支持同样丰富的参数。</p></div><div class="note link"><p>支持同样丰富的参数。</p></div><div class="note todo"><p>支持同样丰富的参数。</p></div><div class="note msg"><p>支持同样丰富的参数。</p></div><div class="note guide"><p>支持同样丰富的参数。</p></div><div class="note up"><p>支持同样丰富的参数。</p></div><div class="note undo"><p>支持同样丰富的参数。</p></div><div class="note paperclip"><p>支持同样丰富的参数。</p></div><h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><details green><summary> <p>点击查看markdown源代码</p> </summary>              <div class="content">              <p>{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。</p><p>{% span small, Test %}<br>{% span large, Test %}<br>{% span huge, Test %}<br>{% span ultra, Test %}<br>{% span ultra logo red,  Test %}</p><p>{% p center logo large, Uncle_drew %}<br>{% p center small, Hand down,man down %}</p>              </div>            </details><span class="p red">红色</span>、<span class="p yellow">黄色</span>、<span class="p green">绿色</span>、<span class="p cyan">青色</span>、<span class="p blue">蓝色</span>、<span class="p gray">灰色</span>。<span class="p small">Test</span><span class="p large">Test</span><span class="p huge">Test</span><span class="p ultra">Test</span><span class="p ultra logo red">Test</span><p class="p center logo large">Uncle_drew</p><p class="p center small">Hand down</p>]]></content>
-    
-    <summary type="html">
-    
-      不同样式的标签渲染，使你的文章可读性更强。
-    
-    </summary>
-    
-      <category term="Life" scheme="/categories/Life/"/>
-    
-    
-      <category term="html" scheme="/tags/html/"/>
-    
-      <category term="javascript" scheme="/tags/javascript/"/>
-    
-      <category term="Hexo" scheme="/tags/Hexo/"/>
-    
-      <category term="markdown" scheme="/tags/markdown/"/>
     
   </entry>
   

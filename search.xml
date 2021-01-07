@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>2020 2 2021</title>
+      <link href="/2021/01/07/2021/"/>
+      <url>/2021/01/07/2021/</url>
+      
+        <content type="html"><![CDATA[<p>咕咕咕了好久的博客（两三个月了吧？</p><p>今天早上扛着零下十度的温度坐火车回到家了，大三上学期也是过去了。2020这一年真的发生了好多事情，慢慢唠一唠。</p><h1 id="退役"><a href="#退役" class="headerlink" title="退役"></a>退役</h1><p>　　正式从河狸算法协会退役了，但是退役的却不是很光荣，成了一个“临阵脱逃”的人。经过了今年CCPC和CCPC省赛的打击，确实失去了一些冲劲。不过既然决定退役了，就不会后悔，这里还是祝愿一下陪我一起奋斗了两年的老伙计，希望你们能拿到自己想要的东西！<br>　　我的ACM生涯就这样结束了，之前总想着说好多好多，现在却不知道说什么了，就放些图纪念一下吧。<br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990002387.webp" data-fancybox="images" data-caption="CodeForces" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990002387.webp" class="img-shadow img-margin"></center></a><br>    </p><p class="p center small">打了五六十场都没上紫的蒟蒻一个</p><br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990132588.webp" data-fancybox="images" data-caption="Nowcoder" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990132588.webp" class="img-shadow img-margin"></center></a><br>    <p class="p center small">打了一百多场牛客都没上1000的蒟蒻一个</p><br>    <a href="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990194618.webp" data-fancybox="images" data-caption="Blog" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/imgcdn/1609990194618.webp" class="img-shadow img-margin"></center></a><br>    <p class="p center small">博客里面的标签页</p><p></p><h1 id="决定考研"><a href="#决定考研" class="headerlink" title="决定考研"></a>决定考研</h1><p>　　之前一直都没准备考研，也没好好学那些考研的课，也做好了求职的准备，但是我家那个她准备考研，正好周围的人也都在劝我，自己心里也纠结了一阵，还是试一下吧，冲一冲，毕竟说心里话，现在这个学校并没有很满足我内心里面对大学的憧憬。</p><p>博客很久没有打理过了，今天在家整理了一下友链，最近也是出现了越来越多的超级好看的主题什么的，看的我心里痒痒的，不过还是不折腾了，我对自己的博客还是很自信的，这个寒假，我可以全身心投入在Artitalk的开发和维护上面，顺便了解了解考研的东西。首先得把驾照考出来，太难了，冲冲冲！</p><p>以后博客不会再涉及题解之类的文章，关于以后写什么类型的文章还没有想清楚，分享生活可能会变成主力。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>👴眼里有了你，所以有光</title>
       <link href="/2020/10/19/wylyg/"/>
       <url>/2020/10/19/wylyg/</url>
@@ -360,9 +385,9 @@
             
             <tag> Github </tag>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -389,9 +414,9 @@
       
         <tags>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -632,33 +657,6 @@
     
     
     <entry>
-      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
-      <link href="/2020/04/09/cf1333F/"/>
-      <url>/2020/04/09/cf1333F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> c/c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c/c++ </tag>
-            
-            <tag> codeforces </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Codeforces Round 632 (Div. 2) D. Challenges in school №41</title>
       <link href="/2020/04/09/cf1333D/"/>
       <url>/2020/04/09/cf1333D/</url>
@@ -680,6 +678,33 @@
             <tag> codeforces </tag>
             
             <tag> 贪心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
+      <link href="/2020/04/09/cf1333F/"/>
+      <url>/2020/04/09/cf1333F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> c/c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> codeforces </tag>
             
         </tags>
       
@@ -2038,9 +2063,9 @@
             
             <tag> map </tag>
             
-            <tag> tree </tag>
-            
             <tag> dsu </tag>
+            
+            <tag> tree </tag>
             
             <tag> Codeforces </tag>
             
@@ -4330,15 +4355,15 @@
             
             <tag> c/c++ </tag>
             
+            <tag> BFS </tag>
+            
             <tag> dp </tag>
+            
+            <tag> 矩阵快速幂 </tag>
             
             <tag> 背包 </tag>
             
             <tag> Thinking </tag>
-            
-            <tag> BFS </tag>
-            
-            <tag> 矩阵快速幂 </tag>
             
             <tag> Greedy </tag>
             
@@ -4567,11 +4592,11 @@
             
             <tag> c/c++ </tag>
             
-            <tag> DP </tag>
-            
             <tag> HDU </tag>
             
             <tag> poj </tag>
+            
+            <tag> DP </tag>
             
         </tags>
       
@@ -4691,17 +4716,17 @@
             
             <tag> c/c++ </tag>
             
-            <tag> HDU </tag>
-            
-            <tag> poj </tag>
-            
-            <tag> STL </tag>
-            
             <tag> BFS </tag>
             
             <tag> DFS </tag>
             
+            <tag> HDU </tag>
+            
             <tag> Queue </tag>
+            
+            <tag> STL </tag>
+            
+            <tag> poj </tag>
             
             <tag> 邻接表 </tag>
             
@@ -4730,11 +4755,11 @@
             
             <tag> Algorithm </tag>
             
+            <tag> BFS </tag>
+            
             <tag> HDU </tag>
             
             <tag> poj </tag>
-            
-            <tag> BFS </tag>
             
             <tag> 51nod </tag>
             
@@ -4769,9 +4794,9 @@
             
             <tag> HDU </tag>
             
-            <tag> poj </tag>
-            
             <tag> STL </tag>
+            
+            <tag> poj </tag>
             
             <tag> CodeForces </tag>
             
@@ -4800,11 +4825,11 @@
             
             <tag> Algorithm </tag>
             
-            <tag> Thinking </tag>
-            
             <tag> BFS </tag>
             
             <tag> DFS </tag>
+            
+            <tag> Thinking </tag>
             
             <tag> Simulation </tag>
             
@@ -4955,19 +4980,19 @@
             
             <tag> HDU </tag>
             
+            <tag> Queue </tag>
+            
+            <tag> STL </tag>
+            
             <tag> poj </tag>
             
             <tag> UVA </tag>
-            
-            <tag> STL </tag>
             
             <tag> math </tag>
             
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
-            
-            <tag> Queue </tag>
             
             <tag> Stack </tag>
             
@@ -5777,11 +5802,11 @@
       
         <tags>
             
+            <tag> BFS </tag>
+            
             <tag> nowcoder </tag>
             
             <tag> Thinking </tag>
-            
-            <tag> BFS </tag>
             
         </tags>
       
@@ -5891,9 +5916,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> poj </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> poj </tag>
             
         </tags>
       
@@ -6030,9 +6055,9 @@
       
         <tags>
             
-            <tag> nowcoder </tag>
-            
             <tag> HDU </tag>
+            
+            <tag> nowcoder </tag>
             
             <tag> Thinking </tag>
             
@@ -6150,9 +6175,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> DP </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> DP </tag>
             
             <tag> HPUOJ </tag>
             
@@ -6515,9 +6540,9 @@
             
             <tag> c/c++ </tag>
             
-            <tag> poj </tag>
-            
             <tag> STL </tag>
+            
+            <tag> poj </tag>
             
             <tag> Greedy </tag>
             
@@ -6985,33 +7010,6 @@
     
     
     <entry>
-      <title>GCD和LCM</title>
-      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
-      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
-      
-        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Algorithm </tag>
-            
-            <tag> c/c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Game 23</title>
       <link href="/2019/03/26/Game%2023/"/>
       <url>/2019/03/26/Game%2023/</url>
@@ -7033,6 +7031,33 @@
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GCD和LCM</title>
+      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
+      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
+      
+        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> c/c++ </tag>
             
         </tags>
       
