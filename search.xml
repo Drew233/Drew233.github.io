@@ -385,9 +385,9 @@
             
             <tag> Github </tag>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -414,9 +414,9 @@
       
         <tags>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -470,9 +470,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> atcoder </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -657,6 +657,33 @@
     
     
     <entry>
+      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
+      <link href="/2020/04/09/cf1333F/"/>
+      <url>/2020/04/09/cf1333F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> c/c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Codeforces Round 632 (Div. 2) D. Challenges in school №41</title>
       <link href="/2020/04/09/cf1333D/"/>
       <url>/2020/04/09/cf1333D/</url>
@@ -678,33 +705,6 @@
             <tag> codeforces </tag>
             
             <tag> 贪心 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
-      <link href="/2020/04/09/cf1333F/"/>
-      <url>/2020/04/09/cf1333F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> c/c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c/c++ </tag>
-            
-            <tag> codeforces </tag>
             
         </tags>
       
@@ -1505,8 +1505,8 @@
     
     <entry>
       <title>Codeforces Round 622 (Div. 2)  C. Skyscrapers</title>
-      <link href="/2020/02/24/cf1313C/"/>
-      <url>/2020/02/24/cf1313C/</url>
+      <link href="/2020/02/23/cf1313C/"/>
+      <url>/2020/02/23/cf1313C/</url>
       
         <content type="html"><![CDATA[<blockquote><p>单调栈是指一个栈内部的元素具有严格单调性的一种数据结构，分为单调递增栈和单调递减栈。</p></blockquote><h1 id="Codeforces-Round-622-Div-2-C-Skyscrapers"><a href="#Codeforces-Round-622-Div-2-C-Skyscrapers" class="headerlink" title="Codeforces Round 622 (Div. 2)  C. Skyscrapers"></a>Codeforces Round 622 (Div. 2)  C. Skyscrapers</h1><p>Link:<a href="https://codeforces.com/contest/1313/problem/C2" target="_blank" rel="noopener">Codeforces Round 622 (Div. 2)  C. Skyscrapers</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>The outskirts of the capital are being actively built up in Berland. The company &quot;Kernel Panic&quot; manages the construction of a residential complex of skyscrapers in New Berlskva. All skyscrapers are built along the highway. It is known that the company has already bought n plots along the highway and is preparing to build n skyscrapers, one skyscraper per plot.</p><p>Architects must consider several requirements when planning a skyscraper. Firstly, since the land on each plot has different properties, each skyscraper has a limit on the largest number of floors it can have. Secondly, according to the design code of the city, it is unacceptable for a skyscraper to simultaneously have higher skyscrapers both to the left and to the right of it.</p><p>Formally, let&#39;s number the plots from 1 to n. Then if the skyscraper on the i-th plot has <script type="math/tex">a_i</script> floors, it must hold that <script type="math/tex">a_i</script> is at most <script type="math/tex">m_i</script> (<script type="math/tex">1 \le a_i \le m_i</script>). Also there mustn&#39;t be integers j and k such that <script type="math/tex">j < i < k</script> and <script type="math/tex">a_j > a_i < a_k</script>. Plots j and k are not required to be adjacent to i.</p><p>The company wants the total number of floors in the built skyscrapers to be as large as possible. Help it to choose the number of floors for each skyscraper in an optimal way, i.e. in such a way that all requirements are fulfilled, and among all such construction plans choose any plan with the maximum possible total number of floors.</p><p>Input<br>The first line contains a single integer n (<script type="math/tex">1 \leq n \leq 500\,000</script>) — the number of plots.</p><p>The second line contains the integers <script type="math/tex">m_1, m_2, \ldots, m_n</script>(<script type="math/tex">1 \leq m_i \leq 10^9</script>) — the limit on the number of floors for every possible number of floors for a skyscraper on each plot.</p><p>Output<br>Print n integers <script type="math/tex">a_i</script> — the number of floors in the plan for each skyscraper, such that all requirements are met, and the total number of floors in all skyscrapers is the maximum possible.</p><p>If there are multiple answers possible, print any of them.</p><p>Examples<br>input<br>5<br>1 2 3 2 1<br>output<br>1 2 3 2 1<br>input<br>3<br>10 6 8<br>output<br>10 6 6<br>Note<br>In the first example, you can build all skyscrapers with the highest possible height.</p><p>In the second test example, you cannot give the maximum height to all skyscrapers as this violates the design code restriction. The answer [10,6,6] is optimal. Note that the answer of [6,6,8] also satisfies all restrictions, but is not optimal.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个序列，序列中每个值的初始值代表的就是这个数能达到的最大值，现在让你随意修改这些数（只要不超过最大值）。问你修改成什么样的情况可以使每个数的两边都没有大于它的数，并且序列和是最大的。<br>由题意我们可以知道最终的答案序列要么是单调递增的，要么是单调递减的，要么就是先单调递增，再单调递减。也就是说一定会存在一个极大值。我们只需要枚举极大值的位置，就可以得到答案了。<br>在c1里面，n只有1000，所以我们可以直接暴力枚举，计算当第i位看为是极大值时，此时达到的最大的序列和，更新使序列和最大的极大值的位置，最后输出即可，时间复杂度<script type="math/tex">O(n^2)</script>。<br>但是c2里面，我们显然是不可以暴力计算的。当然我们仍然可以采用c1的思路去写，不过当第i位看为最大值时，此时的序列和我们需要使用单调栈处理。<br>我们定义四个数组，pre和nxt分别代表第i位左右两边第一个小于它的数的位置。spre和snxt分别代表第i为看为最大值时，1-i和i-n的和。<br>所以现在只要我们计算出spre和snxt数组的值，就可以很快的按照c1的思路进行处理。<br>在计算spre得时候，我们遍历这个序列，每次使用单调栈得到左边第一个小于他的数，假如当前遍历到i，则<code>spre[i]=spre[pre[i]]+(i-pre[i])*a[i]</code>,意思就是以第i位为极大值的时候左边的和，等于比i小的第一个数为极大值时左边的和加上从第一个比i小的数到i都变成a[i]之后的和。这里有中前缀和的感觉。<br>在计算snxt得时候，跟spre是差不多的就不说了。<br>至此我们就计算出了spre和snxt，所以这道题也就可以了。<br>单调栈挺好用的，下次一定会。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include &lt;bits/stdc++.h&gt;using namespace std;typedef long long ll;const int maxn = 5e5 + 10;ll a[maxn], ans[maxn], pre[maxn], nxt[maxn], spre[maxn], snxt[maxn];int main(){    ios::sync_with_stdio(0);    int n;    cin &gt;&gt; n;    for (int i = 1; i &lt;= n; i++) cin &gt;&gt; a[i];    stack&lt;ll&gt; sta;    spre[1] = a[1];    sta.push(1);    for (int i = 2; i &lt;= n; i++) {        while (!sta.empty() &amp;&amp; a[sta.top()] &gt;= a[i]) sta.pop();        if (!sta.empty()) pre[i] = sta.top();//单调栈找出左边第一个小于a[i]的位置        spre[i] = spre[pre[i]] + (i - pre[i]) * a[i];//计算spre        sta.push(i);    }    while (!sta.empty()) sta.pop();    for (int i = 1; i &lt;= n; i++) nxt[i] = n + 1;//初始化nxt数组，上面因为pre数组初值本就是0所以不需要初始化。    sta.push(n);    snxt[n] = a[n];    for (int i = n - 1; i &gt;= 1; i--) {        while (!sta.empty() &amp;&amp; a[sta.top()] &gt;= a[i]) sta.pop();        if (!sta.empty()) nxt[i] = sta.top();//单调栈找出右边第一个小于a[i]的位置        snxt[i] = snxt[nxt[i]] + (nxt[i] - i) * a[i];//计算snxt，类似于spre        sta.push(i);    }    ll pos = 1, maxx = 0;    for (int i = 1; i &lt;= n; i++) {        if (spre[i] + snxt[i] - a[i] &gt; maxx) {            maxx = spre[i] + snxt[i] - a[i];            pos = i;//找到以pos为极值点的时候序列和最大        }    }    ll cur = a[pos]; ans[pos] = a[pos];    for (int i = pos + 1; i &lt;= n; i++) {        cur = min(cur, a[i]);        ans[i] = cur;    }    cur = a[pos];    for (int i = pos - 1; i &gt;= 1; i--) {        cur = min(cur, a[i]);        ans[i] = cur;    }//通过a[pos]为极值点，左右两边确定每个数的取值    for (int i = 1; i &lt;= n; i++) cout &lt;&lt; ans[i] &lt;&lt; &quot; &quot;;    return 0;}</code></pre>]]></content>
       
@@ -3191,9 +3191,9 @@
             
             <tag> c/c++ </tag>
             
-            <tag> 二分 </tag>
-            
             <tag> codeforces </tag>
+            
+            <tag> 二分 </tag>
             
         </tags>
       
@@ -4361,15 +4361,15 @@
             
             <tag> 背包 </tag>
             
-            <tag> 矩阵快速幂 </tag>
-            
             <tag> Thinking </tag>
+            
+            <tag> 矩阵快速幂 </tag>
             
             <tag> Greedy </tag>
             
-            <tag> HPUOJ </tag>
-            
             <tag> 树的直径 </tag>
+            
+            <tag> HPUOJ </tag>
             
             <tag> 博弈论 </tag>
             
@@ -4986,13 +4986,13 @@
             
             <tag> poj </tag>
             
+            <tag> UVA </tag>
+            
             <tag> math </tag>
             
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
-            
-            <tag> UVA </tag>
             
             <tag> Stack </tag>
             
@@ -6737,9 +6737,9 @@
             
             <tag> c/c++ </tag>
             
-            <tag> Thinking </tag>
-            
             <tag> UVA </tag>
+            
+            <tag> Thinking </tag>
             
         </tags>
       
@@ -7010,33 +7010,6 @@
     
     
     <entry>
-      <title>GCD和LCM</title>
-      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
-      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
-      
-        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Algorithm </tag>
-            
-            <tag> c/c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Game 23</title>
       <link href="/2019/03/26/Game%2023/"/>
       <url>/2019/03/26/Game%2023/</url>
@@ -7058,6 +7031,33 @@
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GCD和LCM</title>
+      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
+      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
+      
+        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> c/c++ </tag>
             
         </tags>
       
@@ -7228,6 +7228,31 @@
     
     
     <entry>
+      <title>python学习笔记</title>
+      <link href="/2019/03/26/pythonStudy/"/>
+      <url>/2019/03/26/pythonStudy/</url>
+      
+        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>删除字符串中的子串</title>
       <link href="/2019/03/26/pta-erase/"/>
       <url>/2019/03/26/pta-erase/</url>
@@ -7247,31 +7272,6 @@
             <tag> Algorithm </tag>
             
             <tag> c/c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>python学习笔记</title>
-      <link href="/2019/03/26/pythonStudy/"/>
-      <url>/2019/03/26/pythonStudy/</url>
-      
-        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> python </tag>
             
         </tags>
       
