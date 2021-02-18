@@ -385,9 +385,9 @@
             
             <tag> Github </tag>
             
-            <tag> web </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> web </tag>
             
             <tag> ajax </tag>
             
@@ -414,9 +414,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> web </tag>
             
             <tag> ajax </tag>
             
@@ -499,9 +499,9 @@
             
             <tag> HDU </tag>
             
-            <tag> hash </tag>
-            
             <tag> bfs </tag>
+            
+            <tag> hash </tag>
             
             <tag> 康拓展开 </tag>
             
@@ -4361,9 +4361,9 @@
             
             <tag> 背包 </tag>
             
-            <tag> Thinking </tag>
-            
             <tag> 矩阵快速幂 </tag>
+            
+            <tag> Thinking </tag>
             
             <tag> Greedy </tag>
             
@@ -7010,6 +7010,33 @@
     
     
     <entry>
+      <title>GCD和LCM</title>
+      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
+      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
+      
+        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> c/c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Game 23</title>
       <link href="/2019/03/26/Game%2023/"/>
       <url>/2019/03/26/Game%2023/</url>
@@ -7031,33 +7058,6 @@
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>GCD和LCM</title>
-      <link href="/2019/03/26/GCD%E5%92%8CLCM/"/>
-      <url>/2019/03/26/GCD%E5%92%8CLCM/</url>
-      
-        <content type="html"><![CDATA[<h2 id="GCD-最大公约数"><a href="#GCD-最大公约数" class="headerlink" title="GCD(最大公约数)"></a><center>GCD(最大公约数)</center></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>　　<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B8" target="_blank" rel="noopener">gcd</a>,最大公因数（英语：highest common factor，hcf）也称最大公约数（英语：greatest common divisor，gcd）是数学词汇，指能够整除多个整数的最大正整数。而多个整数不能都为零。</p><h3 id="c-c-语言实现求GCD"><a href="#c-c-语言实现求GCD" class="headerlink" title="c/c++语言实现求GCD"></a>c/c++语言实现求GCD</h3><p>　　求两个整数最大公约数主要的方法有：</p><ul><li>穷举法</li><li>素因数分解</li><li>短除法</li><li>辗转相除法<br>　　这里我们主要用辗转相除法(又称欧几里得算法)求最大公因数。<br><a href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" target="_blank" rel="noopener">辗转相除法</a>：用较大数除以较小数，再用出现的余数（第一余数）去除除数，再用出现的余数（第二余数）去除第一余数，如此反复，直到最后余数是0为止。如果是求两个数的最大公约数，那么最后的除数就是这两个数的最大公约数。<br>具体代码实现</li></ul><pre><code>int gcd(int x,int y){    if(y==0)        return x;    else        return gcd(y,x%y);}//这种方法可以用到三目运算符来简化代码int gcd(int x.int y){    return y==0?x:gcd(y,x%y);}</code></pre><p>上面这种写法用到了递归，还有就是不用递归的写法</p><pre><code>int gcd(int x,int y){    int z;    while(y!=0)    {        z=x%y;        x=y;        y=z;    }    return x;}</code></pre><p>上面两种写法本质上是一样的，就是辗转相除法.</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>HDUOJ 2504</center><br>题目描述<br>又见GCD<br>Time Limit: 1000/1000 MS (Java/Others)    Memory Limit: 32768/32768 K (Java/Others)</p><p>有三个正整数a,b,c(a,b,c是三个大于0小于1e6的数)，其中c不等于b。若a和c的最大公约数为b，现已知a和b，求满足条件的最小的c。</p><p>Input<br>第一行输入一个n，表示有n组测试数据，接下来的n行，每行输入两个正整数a,b。</p><p>Output<br>输出对应的c，每组测试数据占一行。</p><p>Sample Input<br>2<br>6 2<br>12 4<br>Sample Output<br>4<br>8<br>题目分析<br>这是一道简单的考察最大公约数的问题。给定两个数a,b求满足<code>gcd(a,c)=b</code>的最小的c的值且c不等于b。数据范围在1e6以内，并且c是b的倍数，所以可以每次给b加c，每次判断是不是答案即可。即</p><pre><code>c=2*b;    //因为b是a,c的最大公约数，所以c肯定是大于等于b的。又因为题目中了b不等于c，所以给c定初值为2*b。while(gcd(a,c)!=b)    b+=c;    //c是b的倍数，所以可以每次给b加c</code></pre><p>完整代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    if(y==0) return x;    return gcd(y,x%y);}int main(){    int a,b,n;    scanf(&quot;%d&quot;,&amp;n);    while(n--)    {        scanf(&quot;%d %d&quot;,&amp;a,&amp;b);        int c=2*b;        while(gcd(a,c)!=b)        c+=b;        printf(&quot;%d\n&quot;,c);    }    return 0;}</code></pre><p>在vj上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749214x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749214x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="LCM-最小公倍数"><a href="#LCM-最小公倍数" class="headerlink" title="LCM(最小公倍数)"></a><center>LCM(最小公倍数)</center></h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8" target="_blank" rel="noopener">LCM</a>,两个或多个整数公有的倍数叫做它们的公倍数，其中除0以外最小的一个公倍数就叫做这几个整数的最小公倍数。</p><h3 id="c-c-实现求LCM"><a href="#c-c-实现求LCM" class="headerlink" title="c/c++实现求LCM"></a>c/c++实现求LCM</h3><p>n个数的最小公倍数就等于这n个数乘积的绝对值除以这n个数的最大公约数。即<code>lcm(a,b)=a*b/gcd(a,b)</code>。换句话说就是，如果n个数以及这n个数的最大公约数已知，就能求出这n个数的最小公倍数。<br>具体代码实现</p><pre><code>int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}</code></pre><h3 id="实例分析-1"><a href="#实例分析-1" class="headerlink" title="实例分析"></a>实例分析</h3><p><center>蓝桥杯历届试题 核桃的数量</center><br>题目描述<br>历届试题 核桃的数量<br>时间限制：1.0s   内存限制：256.0MB</p><p>问题描述<br>小张是软件项目经理，他带领3个开发组。工期紧，今天都在加班呢。为鼓舞士气，小张打算给每个组发一袋核桃（据传言能补脑）。他的要求是：</p><ol><li>各组的核桃数量必须相同</li><li>各组内必须能平分核桃（当然是不能打碎的）</li><li>尽量提供满足1,2条件的最小数量（节约闹革命嘛）</li></ol><p>输入格式<br>输入包含三个正整数a, b, c，表示每个组正在加班的人数，用空格分开（a,b,c是三个小于30的数）<br>输出格式<br>输出一个正整数，表示每袋核桃的数量。<br>样例输入1<br>2 4 5<br>样例输出1<br>20<br>样例输入2<br>3 1 1<br>样例输出2<br>3<br>题目分析 经过看题的过程可以发现这只是一个让求三个数的最小公倍数的水题，直接写就行。<br>具体代码实现</p><pre><code>#include&lt;stdio.h&gt;int gcd(int x,int y){    return y==0?x:gcd(y,x%y);}int lcm(int x,int y){    return x*y/gcd(x,y);}int main(){    int a,b,c;    scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);    printf(&quot;%d\n&quot;,lcm(lcm(a,b),c));    return 0;}</code></pre><p>在蓝桥评测系统上提交运行的结果</p><a href="https://thyrsi.com/t6/676/1551749245x2728278668.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://thyrsi.com/t6/676/1551749245x2728278668.webp" class="img-shadow img-margin"></center></a><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>关于最大公约数以及最小公倍数的东西先总结到这里，以后再有拓展的话会继续添加。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Algorithm </tag>
-            
-            <tag> c/c++ </tag>
             
         </tags>
       
@@ -7228,31 +7228,6 @@
     
     
     <entry>
-      <title>python学习笔记</title>
-      <link href="/2019/03/26/pythonStudy/"/>
-      <url>/2019/03/26/pythonStudy/</url>
-      
-        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>删除字符串中的子串</title>
       <link href="/2019/03/26/pta-erase/"/>
       <url>/2019/03/26/pta-erase/</url>
@@ -7272,6 +7247,31 @@
             <tag> Algorithm </tag>
             
             <tag> c/c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python学习笔记</title>
+      <link href="/2019/03/26/pythonStudy/"/>
+      <url>/2019/03/26/pythonStudy/</url>
+      
+        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
             
         </tags>
       

@@ -360,9 +360,9 @@
     
       <category term="Github" scheme="/tags/Github/"/>
     
-      <category term="web" scheme="/tags/web/"/>
-    
       <category term="javascript" scheme="/tags/javascript/"/>
+    
+      <category term="web" scheme="/tags/web/"/>
     
       <category term="ajax" scheme="/tags/ajax/"/>
     
@@ -386,9 +386,9 @@
       <category term="Tutorial" scheme="/categories/Tutorial/"/>
     
     
-      <category term="web" scheme="/tags/web/"/>
-    
       <category term="javascript" scheme="/tags/javascript/"/>
+    
+      <category term="web" scheme="/tags/web/"/>
     
       <category term="ajax" scheme="/tags/ajax/"/>
     
@@ -462,9 +462,9 @@
     
       <category term="HDU" scheme="/tags/HDU/"/>
     
-      <category term="hash" scheme="/tags/hash/"/>
-    
       <category term="bfs" scheme="/tags/bfs/"/>
+    
+      <category term="hash" scheme="/tags/hash/"/>
     
       <category term="康拓展开" scheme="/tags/%E5%BA%B7%E6%8B%93%E5%B1%95%E5%BC%80/"/>
     
