@@ -436,9 +436,9 @@
       <category term="Algorithm" scheme="/categories/Algorithm/"/>
     
     
-      <category term="atcoder" scheme="/tags/atcoder/"/>
-    
       <category term="思维" scheme="/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+      <category term="atcoder" scheme="/tags/atcoder/"/>
     
   </entry>
   
@@ -462,9 +462,9 @@
     
       <category term="HDU" scheme="/tags/HDU/"/>
     
-      <category term="bfs" scheme="/tags/bfs/"/>
-    
       <category term="hash" scheme="/tags/hash/"/>
+    
+      <category term="bfs" scheme="/tags/bfs/"/>
     
       <category term="康拓展开" scheme="/tags/%E5%BA%B7%E6%8B%93%E5%B1%95%E5%BC%80/"/>
     
