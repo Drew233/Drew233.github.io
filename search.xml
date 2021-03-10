@@ -385,9 +385,9 @@
             
             <tag> Github </tag>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -414,9 +414,9 @@
       
         <tags>
             
-            <tag> javascript </tag>
-            
             <tag> web </tag>
+            
+            <tag> javascript </tag>
             
             <tag> ajax </tag>
             
@@ -470,9 +470,9 @@
       
         <tags>
             
-            <tag> 思维 </tag>
-            
             <tag> atcoder </tag>
+            
+            <tag> 思维 </tag>
             
         </tags>
       
@@ -657,6 +657,33 @@
     
     
     <entry>
+      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
+      <link href="/2020/04/09/cf1333F/"/>
+      <url>/2020/04/09/cf1333F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> c/c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c/c++ </tag>
+            
+            <tag> codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Codeforces Round 632 (Div. 2) D. Challenges in school №41</title>
       <link href="/2020/04/09/cf1333D/"/>
       <url>/2020/04/09/cf1333D/</url>
@@ -678,33 +705,6 @@
             <tag> codeforces </tag>
             
             <tag> 贪心 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Codeforces Round 632 (Div. 2) F. Kate and imperfection</title>
-      <link href="/2020/04/09/cf1333F/"/>
-      <url>/2020/04/09/cf1333F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Kate-and-imperfection"><a href="#Kate-and-imperfection" class="headerlink" title="Kate and imperfection"></a>Kate and imperfection</h1><p>Link: <a href="https://codeforces.com/contest/1333/problem/F" target="_blank" rel="noopener">Kate and imperfection</a></p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Kate has a set S of n integers <script type="math/tex">\{1, \dots, n\}</script>.</p><p>She thinks that imperfection of a subset <script type="math/tex">M \subseteq S</script> is equal to the maximum of <script type="math/tex">gcd(a,b)</script> over all pairs <script type="math/tex">(a,b)</script> such that both a and b are in M and <script type="math/tex">a \neq b</script>.</p><p>Kate is a very neat girl and for each <script type="math/tex">k \in \{2, \dots, n\}</script> she wants to find a subset that has the smallest imperfection among all subsets in S of size k. There can be more than one subset with the smallest imperfection and the same size, but you don&#39;t need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size k, will name it <script type="math/tex">I_k</script>.</p><p>Please, help Kate to find <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Input<br>The first and only line in the input consists of only one integer n (<script type="math/tex">2\le n \le 5 \cdot 10^5</script>)  — the size of the given set S.</p><p>Output<br>Output contains only one line that includes n−1 integers: <script type="math/tex">I_2</script>, <script type="math/tex">I_3</script>, ..., <script type="math/tex">I_n</script>.</p><p>Examples</p><blockquote><p>input<br>2<br>output<br>1<br>input<br>3<br>output<br>1 1 </p></blockquote><p>Note<br>First sample: answer is 1, because <script type="math/tex">gcd(1, 2) = 1</script>.</p><p>Second sample: there are subsets of S with sizes 2,3 with imperfection equal to 1. For example, <script type="math/tex">\{2,3\}</script> and <script type="math/tex">\{1, 2, 3\}</script>.</p><h2 id="Problem-solving"><a href="#Problem-solving" class="headerlink" title="Problem solving"></a>Problem solving</h2><p>这道题的意思就是给你一个数n，让你分别找出<script type="math/tex">1-n</script>这个序列的长度为<script type="math/tex">2-n</script>的子序列，使得子序列中两两间的<script type="math/tex">gcd</script>的最大值最小。输出这个最小值。</p><p>如果有质数，我们一定是往里面放质数。当质数用完的时候，我们怎么办呢？<br>因为我们要求的是两两间的<script type="math/tex">gcd</script>的最大值的最小。所以我们可以先放与当前序列中质数的<script type="math/tex">gcd</script>为2的数，然后是3，直到放完<br>放完之后，放入的每一个数的每一个因子在序列中都存在了，所以此时能产生的最大的<script type="math/tex">gcd</script>就是它的最大的因子。</p><p>然后我们用一个数组维护某一个数的最大因子，然后排序输出即可。</p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre><code class="lang-c++">#include&lt;bits/stdc++.h&gt;using namespace std;const int maxn = 5e5+10;int p[maxn];int main(){    int n;    cin&gt;&gt;n;    for(int i=1;i&lt;=n;i++)   p[i]=1;    for(int i=2;i&lt;=n;i++){        for(int j=i+i;j&lt;=n;j+=i){            p[j]=i;        }    }    sort(p+1,p+1+n);    for(int i=2;i&lt;=n;i++)   cout&lt;&lt;p[i]&lt;&lt;&quot; &quot;;    return 0;}</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> c/c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c/c++ </tag>
-            
-            <tag> codeforces </tag>
             
         </tags>
       
@@ -756,9 +756,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> 状压dp </tag>
             
@@ -1400,9 +1400,9 @@
       
         <tags>
             
-            <tag> BFS </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> BFS </tag>
             
             <tag> codeforces </tag>
             
@@ -2092,9 +2092,9 @@
       
         <tags>
             
-            <tag> map </tag>
-            
             <tag> Greedy </tag>
+            
+            <tag> map </tag>
             
             <tag> Codeforces </tag>
             
@@ -2225,9 +2225,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> 二进制枚举 </tag>
             
@@ -2536,9 +2536,9 @@
       
         <tags>
             
-            <tag> STL </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> STL </tag>
             
             <tag> bfs </tag>
             
@@ -4148,9 +4148,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> BFS </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> BFS </tag>
             
             <tag> 邻接表 </tag>
             
@@ -4353,9 +4353,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> BFS </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> BFS </tag>
             
             <tag> dp </tag>
             
@@ -4425,9 +4425,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> 51nod </tag>
             
@@ -4590,9 +4590,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> poj </tag>
             
@@ -4714,6 +4714,8 @@
             
             <tag> Algorithm </tag>
             
+            <tag> c/c++ </tag>
+            
             <tag> BFS </tag>
             
             <tag> DFS </tag>
@@ -4723,8 +4725,6 @@
             <tag> Queue </tag>
             
             <tag> STL </tag>
-            
-            <tag> c/c++ </tag>
             
             <tag> poj </tag>
             
@@ -4790,11 +4790,11 @@
             
             <tag> Algorithm </tag>
             
+            <tag> c/c++ </tag>
+            
             <tag> HDU </tag>
             
             <tag> STL </tag>
-            
-            <tag> c/c++ </tag>
             
             <tag> poj </tag>
             
@@ -4945,9 +4945,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> STL </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> STL </tag>
             
             <tag> 前缀和 </tag>
             
@@ -4976,23 +4976,23 @@
             
             <tag> Algorithm </tag>
             
+            <tag> c/c++ </tag>
+            
             <tag> HDU </tag>
             
             <tag> Queue </tag>
             
             <tag> STL </tag>
             
-            <tag> c/c++ </tag>
-            
             <tag> poj </tag>
-            
-            <tag> UVA </tag>
             
             <tag> math </tag>
             
             <tag> Thinking </tag>
             
             <tag> CodeForces </tag>
+            
+            <tag> UVA </tag>
             
             <tag> Stack </tag>
             
@@ -5023,11 +5023,11 @@
             
             <tag> Algorithm </tag>
             
+            <tag> c/c++ </tag>
+            
             <tag> HDU </tag>
             
             <tag> STL </tag>
-            
-            <tag> c/c++ </tag>
             
             <tag> math </tag>
             
@@ -5433,9 +5433,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> Floyd </tag>
             
@@ -5493,9 +5493,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> Dijkstra </tag>
             
@@ -5742,9 +5742,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> HDU </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> HDU </tag>
             
             <tag> Greedy </tag>
             
@@ -6343,9 +6343,9 @@
             
             <tag> Algorithm </tag>
             
-            <tag> STL </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> STL </tag>
             
             <tag> CodeForces </tag>
             
@@ -6374,9 +6374,9 @@
       
         <tags>
             
-            <tag> STL </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> STL </tag>
             
         </tags>
       
@@ -6538,9 +6538,9 @@
       
         <tags>
             
-            <tag> STL </tag>
-            
             <tag> c/c++ </tag>
+            
+            <tag> STL </tag>
             
             <tag> poj </tag>
             
@@ -6598,11 +6598,11 @@
       
         <tags>
             
+            <tag> c/c++ </tag>
+            
             <tag> HDU </tag>
             
             <tag> STL </tag>
-            
-            <tag> c/c++ </tag>
             
         </tags>
       
@@ -6737,9 +6737,9 @@
             
             <tag> c/c++ </tag>
             
-            <tag> UVA </tag>
-            
             <tag> Thinking </tag>
+            
+            <tag> UVA </tag>
             
         </tags>
       
@@ -7228,6 +7228,31 @@
     
     
     <entry>
+      <title>python学习笔记</title>
+      <link href="/2019/03/26/pythonStudy/"/>
+      <url>/2019/03/26/pythonStudy/</url>
+      
+        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>删除字符串中的子串</title>
       <link href="/2019/03/26/pta-erase/"/>
       <url>/2019/03/26/pta-erase/</url>
@@ -7247,31 +7272,6 @@
             <tag> Algorithm </tag>
             
             <tag> c/c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>python学习笔记</title>
-      <link href="/2019/03/26/pythonStudy/"/>
-      <url>/2019/03/26/pythonStudy/</url>
-      
-        <content type="html"><![CDATA[<p>推荐大家去<a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a> 廖雪峰的官方网站学习，我是在本网站的基础上进行的学习以及自己的总结。</p><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>python中的运算符有些跟c是不同的。<br>python中有两种除法</p><pre><code class="lang-python">/      这个除法计算的结果是浮点数，即使两个整数恰好整除，结果也是浮点数；&gt;&gt;&gt; 10 / 33.3333333333333335&gt;&gt;&gt; 9 / 33.0//     这个是整除，不会四舍五入的&gt;&gt;&gt; 10 // 33&gt;&gt;&gt; 10 / 120.8333333333333334&gt;&gt;&gt; 10 // 120</code></pre><h2 id="各种函数"><a href="#各种函数" class="headerlink" title="各种函数"></a>各种函数</h2><p><code>ord()</code>获取字符的整数表示<br><code>chr()</code>把编码转换为对应的字符</p><pre><code class="lang-python">&gt;&gt;&gt; ord(&quot;崔&quot;)23828&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; ord(&quot;美&quot;)32654&gt;&gt;&gt; chr(23828)&#39;崔&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;&gt;&gt;&gt; chr(32654)&#39;美&#39;</code></pre><h2 id="python的格式化"><a href="#python的格式化" class="headerlink" title="python的格式化"></a>python的格式化</h2><p>python中的格式化方式跟c语言是一致的，用<code>%</code>实现。</p><pre><code>%d    整数%f    浮点数%s    字符串%x    十六进制整数&gt;&gt;&gt; &#39;Hello, %s&#39; % &#39;world&#39;&#39;Hello, world&#39;&gt;&gt;&gt; &#39;Hi, %s, you have $%d.&#39; % (&#39;Michael&#39;, 1000000)&#39;Hi, Michael, you have $1000000.&#39;# 具体看来跟c还是有些出入的，注意一下</code></pre><p>还有一种格式化输出的方式即format函数，这个我们上学期学过，我就不再总结了。</p><h2 id="列表——list"><a href="#列表——list" class="headerlink" title="列表——list"></a>列表——list</h2><p>list是一种有序的集合，可以随时添加和删除其中的元素。</p><pre><code class="lang-python">&gt;&gt;&gt; girllist = [&quot;崔美美&quot;,&quot;侍皮皮&quot;,&quot;顾六六&quot;]&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; len(girllist)3&gt;&gt;&gt; girllist[0]&#39;崔美美&#39;&gt;&gt;&gt; girllist[-1]&#39;顾六六&#39;&gt;&gt;&gt; girllist[1]&#39;侍皮皮&#39;</code></pre><p>可以用append函数向列表尾部增加新元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist.append(&quot;jimila&quot;)&gt;&gt;&gt; girllist[3]&#39;jimila&#39;</code></pre><p>还可以用insert函数把元素插入到指定的位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.insert(2,&quot;drew&quot;)&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]</code></pre><p>pop函数可以直接删除列表末尾的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;, &#39;jimila&#39;]&gt;&gt;&gt; girllist.pop()&#39;jimila&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]</code></pre><p>也可以用pop(i)删除指定位置的元素</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;drew&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist.pop(2)&#39;drew&#39;&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引位置</p><pre><code class="lang-python">&gt;&gt;&gt; girllist[&#39;崔美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]&gt;&gt;&gt; girllist[0] = &quot;悦美美&quot;&gt;&gt;&gt; girllist[&#39;悦美美&#39;, &#39;侍皮皮&#39;, &#39;顾六六&#39;]</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> python </tag>
             
         </tags>
       
